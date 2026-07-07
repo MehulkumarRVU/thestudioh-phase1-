@@ -1,0 +1,66 @@
+/* ─── Responsive overrides ─── */
+
+/* Tighter section padding on mobile */
+@media (max-width: 640px) {
+  section {
+    padding-left: 1.25rem !important;
+    padding-right: 1.25rem !important;
+  }
+
+  /* Hero headline */
+  h1 {
+    word-break: break-word;
+  }
+
+  /* Booking step progress — horizontal scroll */
+  .step-progress {
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+  .step-progress::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Prevent oversized modals */
+  [style*="maxWidth: \"420px\""] {
+    padding: 1.75rem !important;
+  }
+}
+
+/* Scrollbars — hidden until hover */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(188,24,35,0.25) transparent;
+}
+*::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+*::-webkit-scrollbar-thumb {
+  background: rgba(188,24,35,0.25);
+  border-radius: 3px;
+}
+*::-webkit-scrollbar-thumb:hover {
+  background: rgba(188,24,35,0.5);
+}
+
+/* Input placeholder color */
+input::placeholder,
+textarea::placeholder {
+  color: rgba(255,255,255,0.25);
+}
+
+/* Select arrow color on dark bg */
+select {
+  appearance: auto;
+}
+
+/* Prevent text overflow in narrow containers */
+.text-clamp {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
